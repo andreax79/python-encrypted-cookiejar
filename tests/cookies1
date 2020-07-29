@@ -1,0 +1,24 @@
+.example.com	TRUE	/	TRUE	1596220582	CCSInfo	bc03948188c9568ccaa09d45b360f683a9a73ee90b7dd87e2346bd7e24d01cd2
+.example.com	TRUE	/	TRUE		rtFa	f9cf9afc4a6efc1585c3db5f5c6a0bcb975100a1aa384f34b3e35e3024e34bf5
+.login.example.com	TRUE	/	TRUE	1598545583	CCState	f5677812714437511a1712dc0b91c269e0442c331ee25e72de9a2173e6258bc9
+.login.example.com	TRUE	/	TRUE		CcsSharedSignInState	1fdd6b907aa1d94a7a1727352384437b2b40428aa85989287d5040bef3bf0ba3
+.login.example.com	TRUE	/	TRUE		ESTSAUTH	5a379b5ab9cef861dcb92e868489eaf7a3c88e68c593872b7b34c4aa1761cef0
+.login.example.com	TRUE	/	TRUE	1603729883	ESTSAUTHPERSISTENT	b8ecafb89faaa7dab854faae93e37457c3d3f45b343028bf32eebaaa82ae5818
+.login.example.com	TRUE	/	TRUE	1603729883	ch	4b650a74123129ae3aea5b9647698f0bb921ed1b41358cf99c45fd475e8b3cc5
+.login.example.com	TRUE	/	TRUE		esctx	bb7419a0027b09c9257fc50219f6a5332bbb6c47bcaaaa1c3325356c26f1f593
+idp.example.org	FALSE	/adfs	TRUE		MSISAuth	fec76f759bba43ef4d62c329b7572be961835fcd645122931bbd5094111458d2
+idp.example.org	FALSE	/adfs	TRUE		MSISAuthenticated	4361242f0ded9a86fbfeb1eacba2c4f1102472f23b31c62540343cb3e892ec5d
+idp.example.org	FALSE	/adfs	TRUE		MSISLoopDetectionCookie	7fd26b5add5296212cb053a1b758084d0576e3117598990ed4cc57dbebb47e39
+idp.example.org	FALSE	/adfs	TRUE		MSISSignOut	ffd65d67094ba3198f988cad1f0f447a36dcd19d52ade39a89f1faff5a452a7a
+login.example.com	FALSE	/	TRUE		ESTSAUTHLIGHT	418d11f82c27162028b90426d43b1e196bb0b877026032a3e18ef80509e9b180
+login.example.com	FALSE	/	TRUE		ESTSSC	00
+login.example.com	FALSE	/	TRUE		SignInStateCookie	4f4255ec284115534e0cd4afe34ebc1ff704d16e745b1b12f998aeae7d756c43
+login.example.com	FALSE	/	TRUE	1598545883	buid	439fea1ae03ee5fbc8a8440649a36cdf6884433a01e5dcd2ed03580135a37666
+login.example.com	FALSE	/	TRUE	1598545883	fpc	9462579773a3169f9e0d3f24329522f29bc14f6c664fc111646d526cca73d933
+login.example.com	FALSE	/	TRUE		stsservicecookie	ests
+login.example.com	FALSE	/	TRUE		x-ms-gateway-slice	prod
+login.example.net	FALSE	/	TRUE		stsservicecookie	ests
+login.example.net	FALSE	/	TRUE		x-ms-gateway-slice	prod
+sub.example.com	FALSE	/	TRUE		FedAuth	d0fd5ae1c600e65ec6be8f80157b48c3b2c854da91f50b39ec7acf207efa998b
+sub.example.com	FALSE	/	FALSE	1595953913	SPWorkLoadAttribution	a5b741993b35754ac9f8771850592fd09eb882eb527554f2a5fed10847cab71f
+sub.example.com	FALSE	/	TRUE	1595954480	nSGt-80C968D1668CDB68008E7FBE0EE9FC4CE87A9CB6F92F917D	01c9f5c52eebbb1710ffb88c024733e350cd46f382ecd1c0980973ff8f0f7f1b

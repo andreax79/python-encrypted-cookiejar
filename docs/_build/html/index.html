@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>python-encrypted-cookiejar &#8212; encrypted_cookiejar 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">encrypted_cookiejar 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-encrypted-cookiejar">
+<h1>python-encrypted-cookiejar<a class="headerlink" href="#python-encrypted-cookiejar" title="Permalink to this headline">¶</a></h1>
+<p>Fernet-encrypted cookie jar</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">encrypted_cookiejar</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">encrypted_securid</span> <span class="k">import</span> <span class="n">EncryptedCookieJar</span>
+
+<span class="n">cookies</span> <span class="o">=</span> <span class="n">EncryptedCookieJar</span><span class="p">()</span>
+<span class="n">cookies</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;encrypted_cookie_jar&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">cookies</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;encrypted_cookie_jar&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="links">
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/andreax79/python-encrypted-securid">Project home page (GitHub)</a></p></li>
+<li><p><a class="reference external" href="https://python-encrypted-securid.readthedocs.io/en/latest/">Documentation (Read the Docs)</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="module-encrypted_cookiejar">
+<span id="api-documentation"></span><h1>API documentation<a class="headerlink" href="#module-encrypted_cookiejar" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="encrypted_cookiejar.EncryptedCookieJar">
+<em class="property">class </em><code class="sig-prename descclassname">encrypted_cookiejar.</code><code class="sig-name descname">EncryptedCookieJar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delayload</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">policy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/encrypted_cookiejar.html#EncryptedCookieJar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#encrypted_cookiejar.EncryptedCookieJar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cookies are NOT loaded from the named file until either the .load() or
+.revert() method is called.</p>
+<dl class="py method">
+<dt id="encrypted_cookiejar.EncryptedCookieJar.iterkeys">
+<code class="sig-name descname">iterkeys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/encrypted_cookiejar.html#EncryptedCookieJar.iterkeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#encrypted_cookiejar.EncryptedCookieJar.iterkeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an iterator of names of cookies from the jar</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="encrypted_cookiejar.EncryptedCookieJar.keys">
+<code class="sig-name descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/encrypted_cookiejar.html#EncryptedCookieJar.keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#encrypted_cookiejar.EncryptedCookieJar.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of names of cookies from the jar</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="encrypted_cookiejar.EncryptedCookieJar.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/encrypted_cookiejar.html#EncryptedCookieJar.load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#encrypted_cookiejar.EncryptedCookieJar.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load cookies from a file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="encrypted_cookiejar.EncryptedCookieJar.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/encrypted_cookiejar.html#EncryptedCookieJar.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#encrypted_cookiejar.EncryptedCookieJar.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save cookies to a file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt id="encrypted_cookiejar.ParseException">
+<em class="property">exception </em><code class="sig-prename descclassname">encrypted_cookiejar.</code><code class="sig-name descname">ParseException</code><a class="reference internal" href="_modules/encrypted_cookiejar.html#ParseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#encrypted_cookiejar.ParseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is raised in case of error parsing file</p>
+</dd></dl>
+
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">python-encrypted-cookiejar</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-encrypted_cookiejar">API documentation</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">encrypted_cookiejar 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>
